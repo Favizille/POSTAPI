@@ -14,6 +14,7 @@ class Profile extends Model
         'dob',
         'hobby',
         'status',
-        'occupation'
+        'occupation',
+        'user_id'
     ];
 }

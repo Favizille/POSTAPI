@@ -27,3 +27,6 @@ Route::post('/logout', [AuthController::class, 'logout']);
 
 // Profile Routes
 Route::post('/profile/create', [UserController::class, 'createProfile']);
+Route::get('/profile/{profileId}', [UserController::class, 'getProfile']);
+Route::put('/profile/update/{profileId}', [UserController::class, 'updateProfile']);
+Route::delete('/profile/delete/{profileId}', [UserController::class, 'deleteProfile']);
