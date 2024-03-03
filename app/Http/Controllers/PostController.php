@@ -18,13 +18,15 @@ class PostController extends Controller
 
     public function createPost(Request $request){
          $request->validate([
-            'status' => 'required',
-            'status' => 'required',
+            'title' => 'required',
+            'body' => 'required',
+            'user_id' => 'required',
         ]);
 
         $postDetails = [
             'title' => $request->input('title'),
-            'dob' => $request->input('dob'),
+            'body' => $request->input('body'),
+            'user_id' => $request->input('user_id'),
         ];
 
         if(!$this->post->create($postDetails)){
