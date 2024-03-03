@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,9 @@ Route::post('/profile/create', [UserController::class, 'createProfile']);
 Route::get('/profile/{profileId}', [UserController::class, 'getProfile']);
 Route::put('/profile/update/{profileId}', [UserController::class, 'updateProfile']);
 Route::delete('/profile/delete/{profileId}', [UserController::class, 'deleteProfile']);
+
+// POST Routes
+Route::post('/post/create', [PostController::class, 'createPost']);
+Route::get('/post/{postId}', [PostController::class, 'getPost']);
+Route::put('/post/update/{postId}', [PostController::class, 'updatePost']);
+Route::delete('/post/delete/{postId}', [PostController::class, 'deletePost']);
